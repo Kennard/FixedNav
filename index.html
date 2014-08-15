@@ -1,1 +1,47 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Fixed Navigation Compass Extension</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen"> 
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="fixednavcontainer">
+			<div class="fixednavbar">
+				<nav>
+					<button type="button" class="nav-icon-position nav-icon">
+						<span class="icon-line"></span>
+						<span class="icon-line"></span>
+						<span class="icon-line"></span>
+					</button>
+					<ul class="fixednav" id="togglemenu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Demos</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>	
+		<div class="firstwrap">
+			<div class="content">
+					<h1>Fixed Navigation Compass Extension</h1>
+					<p>This is an example of a fixed navigation bar compass extension. The CSS position property can also be set to relative for a static navigation. This example also shows how the fixed navigation adjust to the browser viewport for tablets and mobile devices. </p>
+					<p>There are only two really simple mixins in this compass extension. 
+						<ol>
+							<li>The navigation container which sets the minimum height of the navigation bar and</li>
+							<li>The fixed navigation bar properties and value to style the navigation.</li>
+						</ol>	
+					</p>
+					<p><a href="https://github.com/Kennard/FixedNav" target="_new">See the source files on github!</a> &nbsp;<i class="fa fa-github-alt fa-lg"></i> </p>
+			</div>
+		</div>  
+	</div> 
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="js/toggle.js" type="text/javascript"></script>
+</body>
+</html>

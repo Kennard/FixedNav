@@ -1,0 +1,190 @@
+// LAYOUT STYLES
+
+
+*{
+	@include box-sizing(border-box);
+	&:before{
+		@extend *;
+	};
+	&:after{
+		@extend *;
+	};
+}
+
+body{	
+	background: $bgcolor;
+	font-family: 'Open Sans';
+	font-size: 1em;
+	line-height: 1.4em;
+	margin: 0px;
+	color: $txtcolor;
+	min-height: 2000px;
+}
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+
+///////////////////////////////////////////////////////////
+// Compass Extension Fixed Navigation to the Top or Not! //
+///////////////////////////////////////////////////////////
+
+.fixednavcontainer{
+	@include fixednavcontain($minheight:70px);
+}
+
+.fixednavbar{
+	@include fixednav($state:fixed,$top:0px,$height:70px,$width:100%,$background:#fff);
+	border-bottom: 1px solid #d7d7d7; 
+}
+
+
+
+// Hero Content block 
+
+.firstwrap{
+	max-width: 960px;
+	margin: 20px auto;
+	padding: 0 20px;
+	text-shadow: 1px 2px 1px #fff;
+}
+.content{
+	padding: 50px;
+	background: #e9e9e9;
+	border-radius: 6px;
+	& h1{
+		font-size: 2.5em;
+		line-height: 1.15em;
+		padding: 15px 0;
+		display:block;
+	}
+	& p{
+		padding: 10px 0;
+		& a{
+			text-decoration: none;
+			color: #0f9beb;
+		}
+	}
+	& p:nth-child(3){
+		padding: 10px 0;
+		font-weight: bold;
+		~ ol > li{
+			list-style-type: decimal;
+			margin:5px 35px;
+		}
+	}
+}
+
+// Navigation Style 
+
+.fixednav {
+	margin: 0px auto;
+	padding: 0;
+	max-width: 960px;
+	height: 70px;
+	text-align: right;	
+
+
+ 	& li{
+		margin-top: 22px;
+		display: inline-block;
+
+	 & a{
+ 		padding: 25px;
+		color: #333;
+		text-decoration: none;
+
+			&:hover {
+				background: #f7f7f7;
+				color: #0f9beb;
+			}
+		}
+	}
+}
+
+.nav-icon{
+	display: none;
+}
+
+
+
+@media screen and (max-width: $breakpoint){
+	
+	#togglemenu{
+		display: none;
+	}
+	.nav-icon-position{
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		margin-top: 20px;
+		float: right;
+	}
+	.nav-icon{
+		display:block;
+		background: $bgcolor;
+		border: 1px solid #bdbdbd;
+		height: 36px;
+		width: 40px;
+		border-radius: 4px;
+		margin:0;
+		padding:0;
+		cursor: pointer;
+		outline: none;
+	
+	  &:hover{
+		background: #ececec;
+		border: none;
+		border: 1px solid #bdbdbd;
+		}
+	
+		& span.icon-line{
+			background: #0f9beb;
+		}
+	}
+	.icon-line{
+		display: block;
+		background: #bdbdbd;
+		height: 3px;
+		width: 24px; 
+		margin: 4px auto;
+	}
+
+
+ 	.fixednav {
+		position: relative;
+		top: 70px;
+		padding: 0;
+		width: 100%;
+		text-align: left;
+
+			& li{
+			background: #f1f1f1;
+			display: block;
+			margin: 0;
+			padding:15px;
+			border-bottom: 1px solid #d7d7d7;
+				
+			&:hover{
+			background: #f7f7f7;
+			}
+		
+			& a{
+			padding:15px;	
+	 		color: #333;
+	 			
+	 			&:hover{
+	 			color: #0f9beb;
+	 			width: 100%;
+				}
+			}
+		}
+	}
+
+
+
+
+
+}

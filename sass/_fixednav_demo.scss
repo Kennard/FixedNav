@@ -1,0 +1,38 @@
+///////////////////////////////////////////
+// Fixed Naviagtion Bar Mixin//////////////
+///////////////////////////////////////////
+
+// Establish fixednav with your specific values
+	@import "fixednav";
+
+// Create a container for your fixed navbar. Takes one argument
+.fixednavbarcontainer{
+	@include fixednavcontain($minheight:70px)
+}
+
+// Create the actual fixed navigation bar here with specific styles 
+// Switch between fixed and relative navigation
+
+// $state 		- Define the state of the navigation. Fixed or Relative
+// $height 		- Define the height of your navigation. Must be same as the container
+// $width		- Width set to 100%
+// $background  - Any color you want!
+
+.fixednavbar{
+	@include fixednav($state:fixed,$height:70px,$width:100%,$background:#fff);
+}
+
+
+
+//////////////////////////////////////////
+//// Examples ////////////////////////////
+/////////////////////////////////////////
+
+
+.fixednavbarcontainer{
+	@include fixednavcontain($minheight:70px)
+}
+
+.fixednavbar{
+	@include fixednav($state:fixed,$height:70px,$width:100%,$background:#fff);
+}
