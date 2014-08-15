@@ -1,0 +1,17 @@
+
+@mixin fixednavcontain($minheight: null){
+	// Wrap your nav bar in a container an set the height to whatever you want
+		min-height: $minheight;
+} 
+
+@mixin fixednav($state:null, $top:null, $height:null, $width:null, $background:null) {
+	// Establish if you want a fixed or relative(normal) navigation bar
+		position: $state;
+		top: $top;
+		height: $height;
+		width: $width;
+		background: $background;
+}
+
+
+
